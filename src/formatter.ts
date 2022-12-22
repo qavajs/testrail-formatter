@@ -1,4 +1,4 @@
-import {TRClinet} from "./testClientI";
+import {TRClinet} from "./testRailClient";
 const { Formatter, Status } = require('@cucumber/cucumber');
 export class TRFormatter extends Formatter {
     launchId = null;

@@ -8,7 +8,7 @@
     "node_modules"
   ],
   "compilerOptions": {
-    "baseUrl": ".", 
+    "baseUrl": ".",
     "target": "esnext",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -35,9 +35,7 @@
     "types": [
       "chai",
       "node",
-      "node-fetch",
-      "@qavajs/memory",
-      "@qavajs/validation"
+      "@qavajs/api-service"
     ]
   }
 }

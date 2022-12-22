@@ -1,6 +1,5 @@
-import {testRailConfig} from "./testRailConfig";
-// @ts-ignore
-import { sendHttpRequest } from '@qavajs/steps-api';
+import { testRailConfig } from './testRailConfig';
+import { sendHttpRequest } from '@qavajs/api-service';
 interface IParams {
     baseURL: string,
     runId: number,
