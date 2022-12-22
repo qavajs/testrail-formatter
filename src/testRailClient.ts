@@ -26,7 +26,7 @@ export class TRClinet {
         this.headers = headers;
     }
 
-    async updateCaseStatusInRun(runId: number|string, caseId: number|string, requestBody: any) {
+    async updateCaseStatusInRun(runId: number|string, caseId: number|string, requestBody: any): Promise<any> {
         const conf: any = {
             method: 'POST',
             body: JSON.stringify(requestBody),
@@ -36,11 +36,11 @@ export class TRClinet {
             conf)
     }
 
-    async updateCaseFailStatusInRun(caseId: number|string, failMessage?: string) {
+    async updateCaseFailStatusInRun(caseId: number|string, failMessage?: string): Promise<any> {
         return this.updateCaseStatusInRun(this.runId, caseId, testRailConfig.requestBody.updateTestStatus.fail(caseId, failMessage));
     }
 
-    async updateCasePassStatusInRun(caseId: number|string) {
+    async updateCasePassStatusInRun(caseId: number|string): Promise<any> {
         return this.updateCaseStatusInRun(this.runId, caseId, testRailConfig.requestBody.updateTestStatus.pass(caseId));
     }
 }
