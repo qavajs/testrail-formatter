@@ -1,17 +1,19 @@
+// @ts-ignore
+import { httpRequest } from '@qavajs/api-service';
 import { testRailConfig } from './testRailConfig';
-import { sendHttpRequest } from '@qavajs/api-service';
-interface IParams {
+
+export interface IParams {
     baseURL: string,
     runId: number,
     userName: string,
     pass: string,
 }
-export class TRClinet {
+export class TRClient {
     private pass: string;
     private userName: string;
     private baseURL: string;
     private runId: number|string;
-    private headers: { Authorization: string; "Content-Type": string };
+    private headers: { Authorization: string; 'Content-Type': string };
 
     constructor(params: IParams) {
         this.baseURL = params.baseURL;
@@ -32,7 +34,7 @@ export class TRClinet {
             body: JSON.stringify(requestBody),
             headers: this.headers
         };
-        return sendHttpRequest(`${(this.baseURL)}${testRailConfig.endpoint.addResultToRunById(this.runId)}`,
+        return httpRequest(`${(this.baseURL)}${testRailConfig.endpoint.addResultToRunById(this.runId)}`,
             conf)
     }
 
