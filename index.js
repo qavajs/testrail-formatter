@@ -1,3 +1,2 @@
 /* eslint-disable import/no-unresolved */
-require('./lib/trFormatter.js');
-require('./lib/testRailConfig.js');
+module.exports = require('./lib/trFormatter.js').default;
