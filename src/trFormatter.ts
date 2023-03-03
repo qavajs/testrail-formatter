@@ -1,4 +1,4 @@
-import { TRClient, IParams } from './testRailClient';
+import { TRClient, IParams } from './trClient';
 import { Formatter, Status } from '@cucumber/cucumber';
 
 export default class TRFormatter extends Formatter {

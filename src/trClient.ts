@@ -1,4 +1,5 @@
-import { sendHttpRequest } from '@qavajs/api-service';
+// @ts-ignore
+import { httpRequest } from '@qavajs/api-service';
 import { testRailConfig } from './testRailConfig';
 
 export interface IParams {
@@ -33,7 +34,7 @@ export class TRClient {
             body: JSON.stringify(requestBody),
             headers: this.headers
         };
-        return sendHttpRequest(`${(this.baseURL)}${testRailConfig.endpoint.addResultToRunById(this.runId)}`,
+        return httpRequest(`${(this.baseURL)}${testRailConfig.endpoint.addResultToRunById(this.runId)}`,
             conf)
     }
 
