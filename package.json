@@ -1,6 +1,6 @@
 {
   "name": "@qavajs/testrail-service",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "integration with test rail for qavajs project",
   "main": "index.js",
   "scripts": {
