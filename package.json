@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/qavajs/testrail-service.git"
   },
-  "author": "Dzmitry Prakapuk",
+  "authors": [
+    "Dzmitry Prakapuk",
+    "Alexandr Legchilov"
+    ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/qavajs/testrail-service/issues"
